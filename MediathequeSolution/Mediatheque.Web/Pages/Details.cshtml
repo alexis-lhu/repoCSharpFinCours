@@ -1,0 +1,37 @@
+﻿@page
+@model Mediatheque.Web.Pages.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Dvd</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dvd.Poster)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dvd.Poster)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dvd.TitreDeLObjet)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dvd.TitreDeLObjet)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dvd.Emprunteur)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dvd.Emprunteur)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Dvd.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
